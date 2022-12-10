@@ -36,6 +36,7 @@
 #include "Targets/Sparc.h"
 #include "Targets/SystemZ.h"
 #include "Targets/TCE.h"
+#include "Targets/TriCore.h"
 #include "Targets/VE.h"
 #include "Targets/WebAssembly.h"
 #include "Targets/X86.h"
@@ -484,6 +485,9 @@ TargetInfo *AllocateTarget(const llvm::Triple &Triple,
 
   case llvm::Triple::tcele:
     return new TCELETargetInfo(Triple, Opts);
+
+  case llvm::Triple::tricore:
+    return new TriCoreTargetInfo(Triple, Opts);
 
   case llvm::Triple::x86:
     if (Triple.isOSDarwin())

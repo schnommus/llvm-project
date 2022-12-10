@@ -20,6 +20,7 @@
 
 namespace llvm {
 
+class FunctionPass;
 class TargetMachine;
 class TriCoreTargetMachine;
 

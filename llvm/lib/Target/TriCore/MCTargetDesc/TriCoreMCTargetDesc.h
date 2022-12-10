@@ -41,7 +41,6 @@ class Triple;
 extern Target TheTriCoreTarget;
 
 MCCodeEmitter *createTriCoreMCCodeEmitter(const MCInstrInfo &MCII,
-                                      const MCRegisterInfo &MRI,
                                       MCContext &Ctx);
 
 MCAsmBackend *createTriCoreAsmBackend(const Target &T,

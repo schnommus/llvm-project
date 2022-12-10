@@ -25,6 +25,7 @@
 #include "llvm/MC/MCSubtargetInfo.h"
 #include "llvm/Support/ErrorHandling.h"
 #include "llvm/Support/raw_ostream.h"
+#include "llvm/Support/Casting.h"
 
 using namespace llvm;
 
@@ -84,7 +85,6 @@ public:
 } // end anonymous namespace
 
 MCCodeEmitter *llvm::createTriCoreMCCodeEmitter(const MCInstrInfo &MCII,
-                                            const MCRegisterInfo &MRI,
                                             MCContext &Ctx) {
   return new TriCoreMCCodeEmitter(MCII, Ctx);
 }
